@@ -46,7 +46,7 @@ body {
 
 body > header > img {
    display: block;
-   width: 100%;
+   /*width: 100%;*/
 }
 
 
@@ -138,4 +138,5 @@ div.mapInfo h2 {
    font-size: 22px;
    font-weight: normal;
    padding: 10px 20px;
+
 }
