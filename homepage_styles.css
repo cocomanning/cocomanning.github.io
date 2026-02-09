@@ -29,17 +29,16 @@ p, h2, ul li, table.reference {
 /* Body Designs */
 
 html {
-   background-image: url(../images/background3.png);
+   background-color: #4A4E69;
    background-repeat: repeat;
    height: 100%;
 }
 
 body {
     background-color: #F2E9E4;
-    box-shadow: #22223B 10px 0px 25px, #22223B -10px 0px 25px;
     min-height: 100%;
     min-width: 320px;
-    max-width: 1024px;
+    /*max-width: 1024px;*/
     width: 100%;
     font-size: 18px;
     margin: 0px auto;
