@@ -51,6 +51,11 @@ section#button1, section#button2, section#button3 {
     margin: 5px 5px 5px 0px;
 }
 
+section#img {
+   max-width: 100%;
+   height: auto;
+}
+
 article[id^="part"] {
     border: 3px solid gray;
     padding-left: 15px;
