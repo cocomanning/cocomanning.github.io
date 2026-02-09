@@ -13,28 +13,238 @@
 
 */
 
+/* ===========
+   Base Styles
+   ===========
+*/
 
-/* Article Styles */
-article {
-    float: left;
-    width: 384px;
+
+/* HTML and Body Styles */
+
+html {
+   background: light-grey;
+   height: 100%;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 18px;
+}
+
+body {
+   background-color: white;  
+   box-shadow: rgb(51, 51, 51) 5px 0px 15px, rgb(51, 51, 51) -5px 0px 15px;
+   margin: 0px auto;
+   min-height: 100%;
+   min-width: 320px;
+   /*max-width: 1024px;*/
+   width: 100%;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+}
+
+/* Body Header Styles */
+
+header {
+   background: white;
+   width: 100%;   
+}
+
+
+/* Main Section Styles */
+
+
+section#main {
+   display: -webkit-flex; 
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+}
+
+section#main article {
+    flex: 2 1 200px;
+    background-color: rgb(202, 241, 247);
+    padding: 0px 15px;
+    font-size: 20px;
+    order: 99;
+}
+
+section#main img#surf1 {
+    display: block;
+    width: 100%;
+    padding: 15px 0px;
+}
+
+section#main img#surf2 {
+    display: block;
+    float: right;
+    width: 45%;
+    padding: 15px 0px 15px 10px;
+}
+
+section#main aside {
+    flex: 1 1 150px;
+    background-color: rgb(126, 203, 229);
+    padding: 0px 20px;
+    order: 100;
+}
+
+/* Heading Styles */
+
+h1 {
+    font-size: 25px;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Text List Styles */
+
+dl {
+    line-height: 1.4em;
+}
+
+dl dt {
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+    line-height: 1.3em;
+}
+
+dl dt:not(:first-child) {
+    margin-top: 15px;
+}
+
+
+/* Footer Styles */
+
+footer {
+   background-color: rgb(65, 147, 125);
+   font-size: 0.9em;
+   text-align: center;
+   padding: 30px 0px;
+   width: 100%;
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+}
+
+section#f1, section#f2, section#f3 {
+   line-height: 1.3em;
+   flex: 1 1 50px;
+}
+
+address {
+   font-style: normal;
+}
+
+
+section#f1 p:first-line, address:first-line {
+   font-weight: bold;
+   font-size: 18px;
+}
+
+section#f2 p {
+   font-size: 20px;
+}
+
+section#f2 p:first-line {
+   font-weight: bold;
+   font-size: 35px;
 }
 
 
 
-/* First Line and Drop Cap Styles */
-article p:first-of-type::first-line {
-    font-size: 1.25em;
-    font-variant: small-caps;
+
+/* ===============================
+	Mobile Devices: 0 to 480px 
+   ===============================
+*/
+@media only screen and (max-width: 480px) {
+
+   section#main article {
+      font-size: 15px;
+   }
+   
+   section#main aside {
+      display: none;
+   }
+
+   a#navicon {
+      display: block;
+      width: 60px;
+   }
+
+   nav.horizontal {
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-flow: column nowrap;
+      flex-flow: column nowrap;
+   }
+
+   nav.horizontal ul {
+      display: none;
+   }
+
+   a#navicon:hover+ul, nav.horizontal ul:hover {
+      display: -webkit-flex;
+      display: flex;
+   }
+
+   nav.horizontal ul li {
+      display: block;
+      width: 100%;
+   }
+
+   ul.submenu {
+      position: relative;
+   }
+
+   footer {
+      -webkit-flex-flow: column wrap;
+      flex-flow: column wrap;
+   }
+
+   section#f2 {
+      order: 150;
+   }
+
+   section#f1 {
+      order: 151;
+      margin-bottom: 15px;
+   }
+
+   section#f3 {
+      order: 152;
+   }
+
+   section[id^="f"] p {
+      font-size: 15px;
+   }
+
+   section#f2 p:first-line {
+      font-size: 30px;
+   }
+
+   section#f2 p, section#f1 p, section#f3 address {
+      font-size: 15px;
+   }
+
 }
 
-article p:first-of-type::first-letter {
-    font-size: 4em;
-    font-family: serif;
-    float: left;
-    line-height: 0.8em;
-    margin-right: 5px;
-    margin-bottom: 5px;
+
+
+/* =============================================
+	Tablet and Desktop Devices: 481px and Greater
+   =============================================
+*/
+@media only screen and (min-width: 481px) {
+
+   a#navicon {
+      display: none;
+   }
+
 }
 
 
