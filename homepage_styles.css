@@ -58,42 +58,6 @@ header img {
 }
 
 
-/* Navigation Styles */
-
-nav.horizontal {
-   background-color: #4A4E69;
-   min-height: 2em;
-   display: -webkit-flex;
-   display: flex;
-   justify-content: space-around;
-   -webkit-flex-flow: row wrap;
-   flex-flow: row wrap;
-}
-
-nav.horizontal ul li {
-   display: block;
-   width: 7em;
-   line-height: 2em;
-}
-
-nav.horizontal a {
-   display: block;
-   font-size: 18px;
-   text-decoration: none;
-   padding-left: 5px;
-}
-
-nav.horizontal a:visited, nav.horizontal a:link {
-   color: #F2E9E4;
-}
-
-nav.horizontal a:hover, nav.horizontal a:active {
-   background-color: #9A8C98;
-   display: block;
-   color: #F2E9E4;
-}
-
-
 /* Main Menu Styles */
 
 ul.mainmenu {
@@ -111,30 +75,7 @@ ul.mainmenu li {
    position: relative;
 }
 
-/* Submenu Styles */
 
-ul.submenu {
-   position: absolute;
-   width: auto;
-   background-color: #C9ADA7;
-}
-
-ul.submenu li {
-    text-align: left;
-    display: block;
-    width: auto;
-    margin: 0px auto;
-    padding-right: 50px;
-    white-space: nowrap;
-}
-
-ul.submenu {
-   display: none;
-}
-
-a.submenuTitle:hover+ul.submenu, ul.submenu:hover {
-   display: block;
-}
 
 /* Header Styles */
 
@@ -153,6 +94,8 @@ h2 {
    font-weight: normal;
    text-indent: 0px;
 }
+
+
 
 /* Main Section Styles */
 
@@ -199,6 +142,8 @@ p#line {
    text-indent: 0px;
 }
 
+
+
 /* Button Designs */
 
 section#buttons {
@@ -212,6 +157,7 @@ section#buttons {
 section[id^="button"] p {
    text-align: center;
    align-items: baseline;
+   border: 5px solid #252035;
 }
 
 /* Table Designs */
