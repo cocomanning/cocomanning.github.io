@@ -171,7 +171,7 @@ section#main {
 section#main article {
     flex: 2 1 200px;
     background-color: rgb(202, 241, 247);
-    padding: 0px 15px;
+    padding: 5px 20px 5px 20px;
     font-size: 20px;
     order: 99;
 }
@@ -354,6 +354,7 @@ section#f2 p:first-line {
    }
 
 }
+
 
 
 
