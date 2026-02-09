@@ -157,7 +157,10 @@ section#buttons {
 section[id^="button"] p {
    text-align: center;
    align-items: baseline;
-   border: 5px solid #252035;
+}
+
+section[id^="button"] img {
+	border: 5px solid #252035;
 }
 
 /* Table Designs */
