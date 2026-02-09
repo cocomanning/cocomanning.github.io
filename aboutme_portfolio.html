@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--
+          Final Project - About Me Page
+          
+          Author: Nicole Manning Lorino
+          Date:   7/30/2025
+      
+          Filename: aboutme_portfolio.html
+         -->
+        <meta charset="utf-8" />
+        <title>About Me</title>
+        <link href="../css/manninglorinonicole_styles.css" rel="stylesheet" />
+    </head>
+    
+    <body>
+        <nav class="horizontal">
+            <ul class="mainmenu">
+                <li><a href="home_portfolio.html">Home</a></li>
+                <li><a href="reference.html">Reference</a></li>
+                <li><a href="aboutme_portfolio.html">About Me</a></li>
+                <li><a href="projects_portfolio.html" class="submenuTitle">Projects</a>
+                <ul class="submenu">
+                    <li><a href="programming_portfolio.html">Programming</a></li>
+                    <li><a href="gis_portfolio.html">GIS</a></li>
+                    <li><a href="design_portfolio.html">Design</a></li>
+                </ul>
+                </li>
+                <li><a href="skills_portfolio.html">Skills</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <img src="../images/portfolio_logo.jpg" id="logo" alt="Logo" />
+        </header>
+
+        <h1>About Me</h1>
+        <section id="main">
+            <article>
+                <p>Hello! My name is Nicole Manning Lorino, and I love all things geography and science. I am 
+                    particularly fond of political geography, economic geography, programming, and data visualization. 
+                    Many of my projects so far have focused on political trends or issues. 
+                </p>
+                <p>I am currently a sophomore at the University of Texas at Austin studying Geography with a minor 
+                    in Statistics & Data Science. In September, I will transfer to the University of Oregon and 
+                    double major in Data Science: Geography and Spatial Data Science.
+                </p>
+                <p>I am proficient in Python and am gaining experience with JavaScript and HTML. It's still early 
+                    in my career, but so far, I have been teaching myself how to use ArcGIS Pro, ArcGIS online 
+                    programs, and React to create and display maps.
+                </p>
+            </article>
+        </section>
+        <p id="line">----------------------------------</p>
+        <section id="main">
+            <article>
+                <p>Check out this cool video showing a timelapse of human expansion!</p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YWynUCwXrGo?si=VVTID5nmyxxxo_up" 
+                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                    gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </article>
+        </section>
+        <p id="line">----------------------------------</p>
+        <form id="signup">
+            <fieldset id="name">
+                <label for="liked">Did you learn something form this portfolio?</label>
+                <fieldset class="optGroup">
+                    <label for="Yes">Yes</label>
+                    <input name="learn" id="lYes" value="yes" type="radio" />
+                    <label for="No">No</label>
+                    <input name="learn" id="nYes" value="no" type="radio" />
+                </fieldset>
+                <div id="submit">
+                    <input type="submit" value="Submit" />
+                </div>
+            </fieldset>
+        </form>
+
+        <footer>
+            <p>Contact Me</p>
+            <address>
+                Email: <a href="nmlportfolio@example.com">nmlportfolio@example.com</a><br />
+                Phone:	<a href="tel:+12345678910">(234) 567-8910</a>
+            </address>
+        </footer>
+
+    </body>
+</html>
