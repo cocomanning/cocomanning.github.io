@@ -38,7 +38,7 @@ body {
     background-color: #F2E9E4;
     min-height: 100%;
     min-width: 320px;
-    /*max-width: 1024px;*/
+    max-width: 1024px;
     width: 100%;
     font-size: 18px;
     margin: 0px auto;
