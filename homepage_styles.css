@@ -1,160 +1,288 @@
 @charset "utf-8";
 
 /*
-   New Perspectives on HTML5 and CSS3, 7th Edition
-   Assignment 3.1 Page Layout
-   Case Problem 3
+   Styles
    
-   Layout Style Sheet for A Soldier's Scrapbook
-   Author: Nicole Manning Lorino
-   Date:   6/15/2025
+   Author:   Nicole Manning Lorino
+   Date:     7/30/2025
    
-   Filename: ss_layout.css
+   Filename: manninglorinonicole_styles.css
+   
+   This file contains the layout styles used in the Portfolio
+   home page.
 
 */
 
-/* ===========
-   Base Styles
-   ===========
-*/
+/* Text Styles */
+
+h1, h2, table.reference thead th {
+   font-family: Georgia, 'Times New Roman', serif;
+   color: #22223B;
+}
+
+p, h2, ul li, table.reference {
+   font-family: Verdana, Helvetica, Arial, sans-serif;
+   color: #131320;
+}
 
 
-/* HTML and Body Styles */
+/* Body Designs */
 
 html {
-   background: light-grey;
+   background-image: url(../images/background3.png);
+   background-repeat: repeat;
    height: 100%;
-   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-   font-size: 18px;
 }
 
 body {
-   background-color: white;  
-   box-shadow: rgb(51, 51, 51) 5px 0px 15px, rgb(51, 51, 51) -5px 0px 15px;
-   margin: 0px auto;
-   min-height: 100%;
-   min-width: 320px;
-   /*max-width: 1024px;*/
+    background-color: #F2E9E4;
+    box-shadow: #22223B 10px 0px 25px, #22223B -10px 0px 25px;
+    min-height: 100%;
+    min-width: 320px;
+    max-width: 1024px;
+    width: 100%;
+    font-size: 18px;
+    margin: 0px auto;
+}
+
+/* Header Designs */
+
+header {
    width: 100%;
+}
+
+header img {
+    display: block;
+    margin: auto;
+}
+
+
+/* Navigation Styles */
+
+nav.horizontal {
+   background-color: #4A4E69;
+   min-height: 2em;
    display: -webkit-flex;
    display: flex;
+   justify-content: space-around;
    -webkit-flex-flow: row wrap;
    flex-flow: row wrap;
 }
 
-/* Body Header Styles */
+nav.horizontal ul li {
+   display: block;
+   width: 7em;
+   line-height: 2em;
+}
 
-header {
-   background: white;
-   width: 100%;   
+nav.horizontal a {
+   display: block;
+   font-size: 18px;
+   text-decoration: none;
+   padding-left: 5px;
+}
+
+nav.horizontal a:visited, nav.horizontal a:link {
+   color: #F2E9E4;
+}
+
+nav.horizontal a:hover, nav.horizontal a:active {
+   background-color: #9A8C98;
+   display: block;
+   color: #F2E9E4;
 }
 
 
-/* Main Section Styles */
+/* Main Menu Styles */
 
-
-section#main {
+ul.mainmenu {
    display: -webkit-flex; 
    display: flex;
    -webkit-flex-flow: row wrap;
    flex-flow: row wrap;
+   justify-content: space-between;
 }
 
-section#main article {
-    flex: 2 1 200px;
-    background-color: rgb(202, 241, 247);
-    padding: 0px 15px;
-    font-size: 20px;
-    order: 99;
+ul.mainmenu li {
+   text-align: center;
+   display: block;
+   width: 100%;
+   position: relative;
 }
 
-section#main img#surf1 {
+/* Submenu Styles */
+
+ul.submenu {
+   position: absolute;
+   width: auto;
+   background-color: #C9ADA7;
+}
+
+ul.submenu li {
+    text-align: left;
     display: block;
-    width: 100%;
-    padding: 15px 0px;
+    width: auto;
+    margin: 0px auto;
+    padding-right: 50px;
+    white-space: nowrap;
 }
 
-section#main img#surf2 {
-    display: block;
-    float: right;
-    width: 45%;
-    padding: 15px 0px 15px 10px;
+ul.submenu {
+   display: none;
 }
 
-section#main aside {
-    flex: 1 1 150px;
-    background-color: rgb(126, 203, 229);
-    padding: 0px 20px;
-    order: 100;
+a.submenuTitle:hover+ul.submenu, ul.submenu:hover {
+   display: block;
 }
 
-/* Heading Styles */
+/* Header Styles */
 
 h1 {
-    font-size: 25px;
-    text-align: center;
-    font-style: italic;
+   display: block;
+   margin: auto;
+   text-align: center;
+   font-size: 32px;
 }
 
-/* Text List Styles */
-
-dl {
-    line-height: 1.4em;
+h2 {
+   display: block;
+   margin: auto;
+   text-align: center;
+   font-size: 18px;
+   font-weight: normal;
+   text-indent: 0px;
 }
 
-dl dt {
-    font-size: 20px;
-    font-style: italic;
-    font-weight: bold;
-    line-height: 1.3em;
+/* Main Section Styles */
+
+section#main {
+   display: block;
 }
 
-dl dt:not(:first-child) {
-    margin-top: 15px;
+section#main1 {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-around;
+   width: 90%;
+   margin: 20px auto;
 }
 
+article {
+   display: block;
+   margin: auto;
+   padding-left: 10px;
+   width: 60%;
+   text-indent: 30px;
+}
 
-/* Footer Styles */
+article[id^="part"] {
+   flex: 1 1 150px;
+   margin: 0px 10px;
+   border: 2px solid black;
+   border-radius: 5px;
+   padding: 0px;
+}
+
+article[id^="part"] p {
+   padding: 10px;
+}
+
+section#main1 img {
+   width: 90%;
+   display: block;
+   margin: 10px auto;
+}
+
+p#line {
+   text-align: center;
+   text-indent: 0px;
+}
+
+/* Button Designs */
+
+section#buttons {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-evenly;
+   width: 100%;
+   margin-bottom: 30px;
+}
+
+section[id^="button"] p {
+   text-align: center;
+   align-items: baseline;
+}
+
+/* Table Designs */
+
+table.reference {
+    width: 60%;
+    margin: 30px auto;
+    border: 10px solid #988395;
+    background-color: #e5d2cf;
+    border-collapse: collapse;
+}
+
+table.reference tr {
+    height: 25px;
+}
+
+table.reference col.module {
+   width: 25%;
+}
+
+table.reference col.skill {
+   width: 75%;
+}
+
+table.reference th#title {
+   font-size: 23px;
+   font-weight: bold;
+}
+
+table.reference th#mod, table.reference td {
+    border: 2px solid #988395;
+    font-weight: normal;
+    padding: 5px;
+    vertical-align: top;
+    font-size: 18px;
+}
+
+/* Form Designs */
+
+form {
+   background-color: #988395;
+   width: 60%;
+   margin: 10px auto;
+   border: 2px solid black;
+   border-radius: 5px;
+}
+
+form input, fieldset {
+   border-style: none;
+}
+
+/* Footer Designs */
 
 footer {
-   background-color: rgb(65, 147, 125);
-   font-size: 0.9em;
+   background-color: #4A4E69;
+   color: #F2E9E4;
+   padding: 15px;
+   line-height: 1.6em;
    text-align: center;
-   padding: 30px 0px;
-   width: 100%;
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-flow: row wrap;
-   flex-flow: row wrap;
-   justify-content: center;
-   align-items: center;
 }
 
-section#f1, section#f2, section#f3 {
-   line-height: 1.3em;
-   flex: 1 1 50px;
+address a {
+   color: #F2E9E4;
 }
 
-address {
-   font-style: normal;
-}
-
-
-section#f1 p:first-line, address:first-line {
-   font-weight: bold;
-   font-size: 18px;
-}
-
-section#f2 p {
+footer p {
+   font-family: Georgia, 'Times New Roman', serif;
+   margin-top: 0px;
+   margin-bottom: 0px;
    font-size: 20px;
+   color: #F2E9E4;
 }
-
-section#f2 p:first-line {
-   font-weight: bold;
-   font-size: 35px;
-}
-
-
 
 
 /* ===============================
@@ -163,42 +291,8 @@ section#f2 p:first-line {
 */
 @media only screen and (max-width: 480px) {
 
-   section#main article {
+   p {
       font-size: 15px;
-   }
-   
-   section#main aside {
-      display: none;
-   }
-
-   a#navicon {
-      display: block;
-      width: 60px;
-   }
-
-   nav.horizontal {
-      display: -webkit-flex;
-      display: flex;
-      -webkit-flex-flow: column nowrap;
-      flex-flow: column nowrap;
-   }
-
-   nav.horizontal ul {
-      display: none;
-   }
-
-   a#navicon:hover+ul, nav.horizontal ul:hover {
-      display: -webkit-flex;
-      display: flex;
-   }
-
-   nav.horizontal ul li {
-      display: block;
-      width: 100%;
-   }
-
-   ul.submenu {
-      position: relative;
    }
 
    footer {
@@ -206,51 +300,5 @@ section#f2 p:first-line {
       flex-flow: column wrap;
    }
 
-   section#f2 {
-      order: 150;
-   }
-
-   section#f1 {
-      order: 151;
-      margin-bottom: 15px;
-   }
-
-   section#f3 {
-      order: 152;
-   }
-
-   section[id^="f"] p {
-      font-size: 15px;
-   }
-
-   section#f2 p:first-line {
-      font-size: 30px;
-   }
-
-   section#f2 p, section#f1 p, section#f3 address {
-      font-size: 15px;
-   }
-
 }
-
-
-
-/* =============================================
-	Tablet and Desktop Devices: 481px and Greater
-   =============================================
-*/
-@media only screen and (min-width: 481px) {
-
-   a#navicon {
-      display: none;
-   }
-
-}
-
-
-
-
-
-
-
 
