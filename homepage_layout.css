@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+/*
+   Layout Styles
+   
+   Author:   Nicole Manning Lorino
+   Date:     7/26/2025
+   
+   Filename: manninglorinonicole_layout.css
+   
+   This file contains the layout styles used in the Portfolio
+   home page.
+
+*/
+
+html {
+    font-size: 18px;
+    height: 100%;
+}
+
+header, nav, footer {
+    border: 3px solid black;
+    margin: 10px;
+    padding-left: 15px;
+}
+
+section#main {
+    margin: 10px;
+    padding-left: 5px;
+    border: 3px solid black;
+}
+
+article {
+    border: 3px solid gray;
+    padding-left: 15px;
+    margin: 5px 5px 5px 0px;
+}
+
+section#buttons, section#main1 {
+    display: flex;
+    flex-flow: row wrap;
+    border: 3px solid black;
+    margin: 10px;
+    padding: 5px;
+}
+
+section#button1, section#button2, section#button3 {
+    border: 3px solid gray;
+    padding-left: 15px;
+    flex: 1 1 150px;
+    margin: 5px 5px 5px 0px;
+}
+
+article[id^="part"] {
+    border: 3px solid gray;
+    padding-left: 15px;
+    flex: 1 1 150px;
+    margin: 5px 5px 5px 0px;
+}
